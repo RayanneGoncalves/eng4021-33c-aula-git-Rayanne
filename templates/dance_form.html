@@ -1,0 +1,22 @@
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título</label>
+    <input type="text" name="title" value="{{dance.title}}">
+  </div>
+  <div>
+    <label>Descrição</label>
+    <textarea name="description">
+      {{dance.description}}
+    </textarea>
+  </div>
+  <div>
+    <label> Nome </label>
+    <input type="text" name="nome" value={{dance.nome}}>
+  </div>
+  <div>
+    <input type="checkbox" name="done"  {% if dance.done == True %} checked {% endif %}>
+    <label>Feita</label>
+  </div>
+  <input type="submit">
+</form>

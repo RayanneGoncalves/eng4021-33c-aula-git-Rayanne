@@ -1,0 +1,24 @@
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título</label>
+    <input type="text" name="title" value="{{passos.title}}">
+  </div>
+  <div>
+    <label>Nome</label>
+    <input type="text" name="nome" value="{{passos.nome}}">
+  </div>
+  <div>
+    <label> Sobrenome </label>
+    <input type="text" name="sobrenome" value="{{passos.sobrenome}}">
+  </div>
+  <div>
+    <label>Data </label>
+    <input type="date" name="data" value={{passos.data}}>
+  </div>
+  <div>
+    <input type="checkbox" name="done" {% if passos.done == True %} checked {% endif %}>
+    <label>Feita</label>
+  </div>
+  <input type="submit">
+</form>

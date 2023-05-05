@@ -1,0 +1,15 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+h1 {font-family: 'Bona Nova', serif;color:#7e7272; 
+}
+h2{font-family: 'Bona Nova',serif;color:#e5389d}
+.let-vermelho{color:red}
+p{font-family: 'Bona Nova', serif}
+li{color:#3b3535}
+.tab-cor{color:#f4a78a}
+.tit-tab {
+ background-color: #f7c5d9;
+}
+.cor-rosa{color:#e5389d}

@@ -1,0 +1,127 @@
+{% load static %}
+<html>
+<head>
+  <title> A arte da dança </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap" rel="stylesheet">   
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ 
+</head>
+  
+<body>
+  <h1> Rayanne Gonçalves de Abreu </h1>
+  <h2> Um, dois, três: Dance! </h2>
+  <img width="400" src=https://saude.abril.com.br/wp-content/uploads/2017/01/danc3a7a-fitness.jpg?quality=85&strip=info&w=680&h=453&crop=1" >
+
+  <p><b>
+    A dança está conectada ao aprofundamento dos conhecimentos corporais, a vida e sua vontade e paixão de se expressar. Sua definição retrata um movimento artístico, utilizando o corpo como instrumento, podendo ter ou não ligação musical. Pode ser usada com o objetivo artístico em apresentações e espetáculos, mas também pode ser como forma de diversão, de forma recreativa.    
+ </b></p>
+  
+  <h3> Breve história da dança: </h3>
+  <p> A dança surgiu na pré-história com uma experimentação corporal de bater os pés no chão e bater palmas. A dança foi propagada em diversas civilizações com propósitos diferentes. No Egito tinha o objetivo de agradar os Deuses, sendo utilizada em casamento ou até mesmo em atos fúnebres. Em Roma utilizava-se para rituais sagrados, entretanto no período do Império Romano foi considerado mecanismo de sedução barato, levando a dança perder seu espaço. A partir do século XVI começaram a surgir os tratados de dança. Cada país criando suas próprias danças, sendo elas coletivas ou em pares. No século XIX começaram a ocorrer danças mais sensuais, como o tango. Dessa forma a dança foi se transformando em cada cultura, com seus modos, suas características e particularidades. 
+  </p>
+
+  <ul>
+    {% for dance in dance %}
+      <li>
+        {{dance.title}}
+        <a href="/dance/edit/{{dance.id}}">Editar</a>
+        <a href="/dance/delete/{{dance.id}}">Remover</a>
+        </li>
+        {{dance.description}}<br>
+        {{ dance.nome }}<br>
+        {{ dance.done }}
+      
+      
+    {% endfor %}
+  </ul>
+
+  
+  <i class="let-vermelho">Para mais informações e estilos: </i> 
+  <a href="https://balletfitonline.com/8-estilos-de-danca/" target="_blank"> Estilos de dança </a>
+  <br>
+  <br>
+  <b> Ao aplicar a dança em um ambiente de ensino podemos usar 4 passos: </b>
+  <ol>
+   {% for passos in passos %}
+      <li>
+        {{passos.title}}
+        <a href="/passos/edit/{{passos.id}}">Editar</a>
+        <a href="/passos/delete/{{passos.id}}">Remover</a>
+      </li>
+        {{ passos.nome}}<br>
+        {{ passos.sobrenome }}<br>
+        {{ passos.data}}<br>
+        {{ passos.done }}
+      {% endfor %}
+  </ol>
+
+  <p> <b> A dança, como mencionado anteriormente, está retratando um movimento artístico, podendo ter grandes apresentações e espetáculos. Um grande exemplo de espetáculos são os Ballet de Repertório, em francês chamado de ballet d'action, o qual conta uma narrativa a partir dos seus passos e movimentos, as coreografias são divididas em atos ou cenas. As apresentações mais famosas são: Lago dos Cisnes; O Quebra-Nozes; Dom Quixote; Coppélia, e outros. 
+    Na tabela abaixo é exemplicado alguns ballet em seu ano e local de estreia. </b>
+  </p>
+  <strong class='tab-cor'> TABELA DOS MAIORES BALLET DE REPERTÓRIO: </strong>
+  <table border="1">
+    <tr class='tit-tab'>
+        <th>Espetáculo</th>
+        <th>Ano de estreia</th>
+        <th>Local de estreia</th>
+    </tr>
+    <tr>
+        <td>La Sylphide</td>
+        <td>1832</td>
+        <td>Ópera de Paris</td>
+    </tr>
+    <tr>
+        <td>Giselle</td>
+        <td>1840</td>
+        <td>Ópera de Paris</td>
+    </tr>
+    <tr>
+        <td>Copéllia</td>
+        <td>1870</td>
+        <td>Ópera de Paris</td>
+    </tr>
+    <tr>
+        <td>O Lago dos Cisnes</td>
+        <td>1877</td>
+        <td>Teatro Bolshoi</td>
+    </tr>
+    <tr>
+        <td>A Bela Adormecida</td>
+        <td>1890</td>
+        <td>Teatro Mariinsky</td>
+    </tr>
+     <tr>
+        <td>Dom Quixote</td>
+        <td>1869</td>
+        <td> Teatro Bolshoi</td>
+    </tr>
+     <tr>
+        <td>O Quebra-Nozes</td>
+        <td>1892</td>
+        <td>Teatro Mariinsky</td>
+    </tr>
+    <tr>
+        <td>O Corsário</td>
+        <td>1858</td>
+        <td>Teatro Bolshoi</td>
+    </tr>
+    <tr>
+        <td>La Bayadère</td>
+        <td>1877</td>
+        <td>Teatro Mariinsky</td>
+    </tr>
+ 
+</table>
+    <br>
+    <p>Por fim, ao observar alguns pontos importantes da história da arte de dançar percebe-se que a cada ano tem mais inspirações, mais modos de se expressar por meio da dança, podendo criar grandes apresentações ou apenas ser utilizada como uma forma de se divertir. E se alguém tem vontade e paixão de mostrar a sua arte da dança:</p>
+  <p class='cor-rosa'><b>Um, dois, três: Dance!  </b>  </p>
+
+  
+  
+</body>
+
+
+  
+</html>

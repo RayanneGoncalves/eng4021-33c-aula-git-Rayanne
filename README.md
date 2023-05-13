@@ -16,3 +16,5 @@ A partir desse comando há a solicitação para preencher 3 questões:
 Username: Um nome para poder entrar no admin do django
 Email address: um email 
 Password: uma senha para entrar no admin do django 
+
+O comando python3 manage.py runserver 0.0.0.0:3000 inicia um servidor local para uma aplicação web Django na porta 3000. 
